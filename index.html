@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
    </head>
-    <body class="flex flex-col items-center mt-8 bg-gray-700">  
-     <div class="relative rounded-full h-40 w-40">
-        <div id="avatar" class="h-40 w-40 rounded-full bg-gray-600 ring-4">
+    <body class="flex flex-col items-center mt-8 bg-gray-300">  
+     <div class="relative  h-40 w-40">
+        <div id="avatar" class="h-40 w-40  bg-gray-200 ring-4">
         </div>
        <div id="status">
          </div>
@@ -81,11 +81,11 @@
           if (!['INIT_STATE', 'PRESENCE_UPDATE'].includes(msg.t)) return;
             let user = msg.d;
             $("#name").text(user.discord_user.username+"#"+user.discord_user.discriminator)
-            $("#avatar").html(`<img src="https://cdn.discordapp.com/avatars/280696584889696257/${user.discord_user.avatar}.gif" class="flex rounded-full h-40 w-40 mt-auto ml-auto">`)
+            $("#avatar").html(`<img src="https://cdn.discordapp.com/avatars/280696584889696257/${user.discord_user.avatar}.gif" class="flex  h-40 w-40 mt-auto ml-auto">`)
             console.log(msg.d)
            
             if(msg.d.discord_status === "online") {
-             $("#status").html(`<span class="absolute bottom-2 right-3  inline-block w-6 h-6 mr-2 bg-green-600 ring-2 ring-green-500 rounded-full"></span>`)
+             $("#status").html(`<span class="absolute bottom-2 right-0  inline-block w-4 h-4 mr-2 bg-green-600 ring-2 ring-green-500 rounded-full"></span>`)
              $("#avatar").addClass("ring-green-500")
             }
             if(msg.d.discord_status === "offline") {
