@@ -24,7 +24,7 @@
       </div>
      <div class="bg-gray-600 py-5 p-5 mt-5 text-white text-center max-w-2xl space-y-1">
          <h1 id="name" class="font-semibold text-2xl">downloading...</h1>
-         <a href="https://instagram.com/efeeshuu"><i class="fab fa-instagram"></i></a>
+         <a href="https://instagram.com/efeeshu"><i class="fab fa-instagram"></i></a>
          <a href="https://github.com/aw3rque"><i class="fab fa-github"></i></a>
          <a href="https://www.twitch.tv/efeshu"><i class="fab fa-twitch"></i></a>
          <a href="https://open.spotify.com/user/3nwgygqzwengb9a6x5qyb9yn5?si=dbb726fc8dbe42ee"><i class="fab fa-spotify"></i></a>
@@ -77,7 +77,7 @@
           if (!['INIT_STATE', 'PRESENCE_UPDATE'].includes(msg.t)) return;
             let user = msg.d;
             $("#name").text(user.discord_user.username+"#"+user.discord_user.discriminator)
-            $("#avatar").html(`<img src="https://cdn.discordapp.com/avatars/280696584889696257/${user.discord_user.avatar}.png" class="flex rounded-full h-40 w-40 mt-auto ml-auto">`)
+            $("#avatar").html(`<img src="https://cdn.discordapp.com/avatars/280696584889696257/${user.discord_user.avatar}.gif" class="flex rounded-full h-40 w-40 mt-auto ml-auto">`)
             console.log(msg.d)
            
             if(msg.d.discord_status === "online") {
