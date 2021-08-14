@@ -82,7 +82,7 @@
           if (!['INIT_STATE', 'PRESENCE_UPDATE'].includes(msg.t)) return;
             let user = msg.d;
             $("#name").text(user.discord_user.username+"#"+user.discord_user.discriminator)
-            $("#avatar").html(`<img src="https://cdn.discordapp.com/avatars/280696584889696257/${user.discord_user.avatar}.gif" class="flex  h-40 w-40 mt-auto ml-auto">`)
+            $("#avatar").html(`<img src="https://cdn.discordapp.com/avatars/280696584889696257/${user.discord_user.avatar}.png" class="flex  h-40 w-40 mt-auto ml-auto">`)
             console.log(msg.d)
            
             if(msg.d.discord_status === "online") {
