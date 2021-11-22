@@ -1,0 +1,43 @@
+:root{
+	--blurple: #e6b3dc;
+	--dark-blurple: #d1abcf;
+	--blurple-hover: #c9a0d1;
+}
+
+
+body, html {
+    background-color: var(--blurple);
+    font-family: 'Poppins', sans-serif;
+    color:white;
+	scroll-behavior: smooth;	
+}
+
+.statistics {
+    text-align: center !important;
+    padding-top: 300px !important;
+}
+
+.statistics .card-body{
+    padding: 0 !important;
+    height: 280 !important;
+    width: 332 !important;
+    max-height: 280 !important;
+    max-width: 332 !important;
+}
+
+.statistics .title {
+    font-size: 40px !important;
+    color: #ffffff !important;
+    line-height: 70px !important;
+}
+
+.statistics .subtitle {
+    font-size: 20px !important;
+    color: #a2a8bd;
+}
+
+.card.statistic {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #f7f7f7 !important;
+}
