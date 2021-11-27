@@ -13,11 +13,10 @@
 
 
 :root{
-	--blurple: #e6b3dc;
-	--dark-blurple: #d1abcf;
-	--blurple-hover: #c9a0d1;
+	--blurple: #212529;
+	--dark-blurple: #c9184a;
+	--blurple-hover: #ff758f;
 }
-
 
 body, html {
     background-color: var(--blurple);
@@ -35,6 +34,12 @@ body, html {
 .blurple-dark:hover {
     background-color: var(--blurple-hover);
     transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 800px) {
+.efendimaskim {
+margin-left: 55%;
+}
 }
 
 .team {
@@ -101,101 +106,11 @@ body, html {
 }
 
 
-/* RAINBOW */
 
-.demo{
-  animation: rainbow-bg 2.5s linear;
+
+.canimsin{
+  color: #ff0061
 }
-
-.rainbow-bg{
-		animation: rainbow-bg 2.5s linear;
-		animation-iteration-count: infinite;
-}
-
-.rainbow{
-		animation: rainbow 2.5s linear;
-		animation-iteration-count: infinite;
-}
-
-@keyframes rainbow-bg{
-		100%,0%{
-			background-color: rgb(255,0,0);
-		}
-		8%{
-			background-color: rgb(255,127,0);
-		}
-		16%{
-			background-color: rgb(255,255,0);
-		}
-		25%{
-			background-color: rgb(127,255,0);
-		}
-		33%{
-			background-color: rgb(0,255,0);
-		}
-		41%{
-			background-color: rgb(0,255,127);
-		}
-		50%{
-			background-color: rgb(0,255,255);
-		}
-		58%{
-			background-color: rgb(0,127,255);
-		}
-		66%{
-			background-color: rgb(0,0,255);
-		}
-		75%{
-			background-color: rgb(127,0,255);
-		}
-		83%{
-			background-color: rgb(255,0,255);
-		}
-		91%{
-			background-color: rgb(255,0,127);
-		}
-}
-
-@keyframes rainbow{
-		100%,0%{
-			color: rgb(255,0,0);
-		}
-		8%{
-			color: rgb(255,127,0);
-		}
-		16%{
-			color: rgb(255,255,0);
-		}
-		25%{
-			color: rgb(127,255,0);
-		}
-		33%{
-			color: rgb(0,255,0);
-		}
-		41%{
-			color: rgb(0,255,127);
-		}
-		50%{
-			color: rgb(0,255,255);
-		}
-		58%{
-			color: rgb(0,127,255);
-		}
-		66%{
-			color: rgb(0,0,255);
-		}
-		75%{
-			color: rgb(127,0,255);
-		}
-		83%{
-			color: rgb(255,0,255);
-		}
-		91%{
-			color: rgb(255,0,127);
-		}
-}
-
-
 
 
 /* SNACKBAR BUTONU */
@@ -246,3 +161,18 @@ body, html {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+.buttons::first-child {
+  margin-left: 0vh;
+}
+
+
+.buttons {
+  margin-left: 1vh;
+}
+
+.vatanmillet:hover {
+  transform: translateY(0) scale(1.2);
+  transition: 0.5s;
+}
+

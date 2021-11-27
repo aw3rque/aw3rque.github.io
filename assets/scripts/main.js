@@ -42,8 +42,8 @@ function renderTime() {
       s = "0" + s;
   }
   var myClock = document.getElementById('clockDisplay');
-  myClock.textContent = "Clock : " + h + ":" + m + ":" + s + " " + diem;
-  myClock.innerText = "Clock : " + h + ":" + m + ":" + s + " " + diem;
+  myClock.textContent = + h + ":" + m + ":" + s + " " + diem;
+  myClock.innerText =   + h + ":" + m + ":" + s + " " + diem;
   }
   renderTime();
   
