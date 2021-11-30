@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--dark-blurple);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blurple-hover);
+}
+
+
+:root{
+	--blurple: #212529;
+	--dark-blurple: #c9184a;
+	--blurple-hover: #ff758f;
+}
+
+body, html {
+    background-color: var(--blurple);
+    font-family: 'Poppins', sans-serif;
+    color:white;
+	scroll-behavior: smooth;	
+}
+
+.blurple-dark {
+    background-color: var(--dark-blurple);
+    transition-duration: 0.5s;
+}
+
+
+.blurple-dark:hover {
+    background-color: var(--blurple-hover);
+    transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 800px) {
+.efendimaskim {
+margin-left: 55%;
+}
+}
+
+.team {
+    display:flex;
+    position:relative;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+}
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+
+
+
+.canimsin{
+  color: #ff0061
+}
+
+
+/* SNACKBAR BUTONU */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.buttons::first-child {
+  margin-left: 0vh;
+}
+
+
+.buttons {
+  margin-left: 1vh;
+}
+
+.vatanmillet:hover {
+  transform: translateY(0) scale(1.2);
+  transition: 0.5s;
+}
+
+.title[data-v-6a276cd6] {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem
+}
+
+@media (min-width: 984px) {
+  .title[data-v-6a276cd6] {
+      font-size:4.5rem;
+      line-height: 1;
+      line-height: 5rem;
+      margin-bottom: 3.5rem
+  }
+}
+
+.title[data-v-6a276cd6] span {
+  position: relative;
+  z-index: 10
+}
+
+.title[data-v-6a276cd6] span:after {
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='333' height='41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 25c64.966-11.94 219.119-29.413 316-3.793m0-.18c-42.008-.281-136.219 1.52-177 10.973' stroke='%23E3DCFF' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: none;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  z-index: -10
+}
+
+@media (min-width: 984px) {
+  .title[data-v-6a276cd6] span:after {
+      display:block
+  }
+}
+
