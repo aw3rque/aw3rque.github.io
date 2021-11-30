@@ -176,3 +176,47 @@ margin-left: 55%;
   transition: 0.5s;
 }
 
+.title[data-v-6a276cd6] {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem
+}
+
+@media (min-width: 984px) {
+  .title[data-v-6a276cd6] {
+      font-size:4.5rem;
+      line-height: 1;
+      line-height: 5rem;
+      margin-bottom: 3.5rem
+  }
+}
+
+.title[data-v-6a276cd6] span {
+  position: relative;
+  z-index: 10
+}
+
+.title[data-v-6a276cd6] span:after {
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='333' height='41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 25c64.966-11.94 219.119-29.413 316-3.793m0-.18c-42.008-.281-136.219 1.52-177 10.973' stroke='%23E3DCFF' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: none;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  z-index: -10
+}
+
+@media (min-width: 984px) {
+  .title[data-v-6a276cd6] span:after {
+      display:block
+  }
+}
+
