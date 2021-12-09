@@ -17,6 +17,21 @@
 	<div id="loader" class="top-0 left-0 flex justify-center z-50 blurple-dark w-full h-full items-center fixed">
 		<div class="m-32 lds-heart"><div></div></div>
 	</div>
+    <div id="game" class="hidden">
+        <div class="flex items-center p-2 rounded-xl">
+          <div id="art" class="flex items-center space-x-4 md:py-5 md:p-5">
+        </div>
+        <div class="font-semibold">
+            <i class="fa fa-spotify" aria-hidden="true"></i>
+            I'm listening to
+          <div id="aname" class="text-yellow-300">
+          </div>         
+        </div>
+        <div id="album_art" class="p-3 py-5">
+        </div>
+      </div>
+     </div>
+
      <div class="flex flex-col h-screen text-white text-center items-center justify-center">
          <img id="logo" src="https://top.gg/api/widget/412016041749643277.png" draggable="false" class="w-60 mb-10" alt="logo">
          <div class="title" data-v-6a276cd6><span>Luci</span></div> 
@@ -30,8 +45,6 @@
             <a href="askim.html" target="_blank" class="p-4 rounded-md items-center flex justify-center text-center blurple-dark outline-none"><i class="fab text-lg mr-2 fas fa-user"></i>Commands</a>
         </div>
     </div>
-
-
     <!-- MUZIK BUTONU  -->
 
     <audio id="audio" preload="" autoplay="" loop="">
@@ -116,6 +129,18 @@
                 $("#status").html(`<span class="absolute bottom-2 right-3  inline-block w-6 h-6 mr-2 bg-yellow-600 ring-2 ring-yellow-500 rounded-full"></span>`)
                 $("#avatar").addClass("ring-yellow-600")
                }
+
+               if (msg.d.spotify.track_id) {
+              $("#game").removeClass("hidden");
+              $("#aname").text(msg.d.spotify.song)
+              $("#adec").text(msg.d.spotify.artist)
+              $("#album").text(msg.d.spotify.album)
+              $("#art").html(`<img class="w-16 h-16 rounded-lg" src="${msg.d.spotify.album_art_url}">`)
+                
+            } else {
+              $("#game").addClass("hidden");  
+            }
+
            };
        </script>
 
