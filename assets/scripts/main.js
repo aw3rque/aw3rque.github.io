@@ -57,34 +57,3 @@ function myFunction() {
 	// After 3 seconds, remove the show class from DIV
 	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   }
-
-  let wsu = new WebSocket('wss://api.lanyard.rest/socket');
-  let Intervalu;
-     wsu.onopen = () => {
-       wsu.send(
-         JSON.stringify({
-           op: 2,
-           d: {
-             subscribe_to_id: "280696584889696257",
-          },
-         })
-       );
-       Intervalu = setInterval(() => {
-         wsu.send(
-           JSON.stringify({
-             op: 3,
-           })
-         );
-       }, 3000);
-     };
-    wsu.onmessage = (msgu) => {
-       msgu = JSON.parse(msgu.data);
-       if (!['INIT_STATE', 'PRESENCE_UPDATE'].includes(msgu.t)) return;
-         let useru = msgu.d;
-         $("#avatar7").html(`<img src="https://cdn.discordapp.com/avatars/301049890925182979/${useru.discord_user.avatar}.gif" style="height: 200px; width: 200px;">                                                 
-          <div class="team-hover text-center">
-              <i class="fa fa-male"></i>
-              <p>`+useru.discord_user.username+"#"+useru.discord_user.discriminator+`</p>
-          </div>`
-          );
-  };
