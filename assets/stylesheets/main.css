@@ -176,6 +176,15 @@ margin-left: 55%;
   transition: 0.5s;
 }
 
+.imageeffect:hover {
+  color: #60aac5;
+}
+
+.imageeffect  {
+  color: #fff;
+  transition: 0.5s;
+}
+
 .title[data-v-6a276cd6] {
   font-weight: 700;
   font-size: 2.25rem;
