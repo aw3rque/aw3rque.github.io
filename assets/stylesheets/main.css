@@ -177,6 +177,7 @@ margin-left: 55%;
 }
 
 .imageeffect:hover {
+  text-shadow: 0 0 9px #60aac5, 0 0 9px #60aac5;
   color: #60aac5;
 }
 
